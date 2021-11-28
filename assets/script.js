@@ -22,8 +22,8 @@ function timeBlockColor() {
 
 // save button/local storage
 saveBtn.on("click", function() {
-    var time=$(this).siblangs(".hour").text();
-    var plan=$(this).siblangs(".plan").val();
+    var time=$(this).siblings(".hour").text();
+    var plan=$(this).siblings(".plan").val();
 
     localStorage.setItem(time, plan);
 });
@@ -31,10 +31,10 @@ saveBtn.on("click", function() {
  function usePlanner() {
      $(".hour").each(function() {
          var currHour= $(this).text();
-         var currPLan= localStorage.getItem(currHour);
+         var currPlan= localStorage.getItem(currHour);
 
-         if(currPLan !== null) {
-             $(this).siblangs(".plan").val(currPlan);
+         if(currPlan !== null) {
+             $(this).siblings(".plan").val(currPlan);
          }
      });
  }
