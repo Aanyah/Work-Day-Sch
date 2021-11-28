@@ -38,3 +38,6 @@ saveBtn.on("click", function() {
          }
      });
  }
+ 
+ timeBlockColor();
+ usePlanner();
