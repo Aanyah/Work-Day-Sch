@@ -19,3 +19,22 @@ function timeBlockColor() {
         }
     })
 };
+
+// save button/local storage
+saveBtn.on("click", function() {
+    var time=$(this).siblangs(".hour").text();
+    var plan=$(this).siblangs(".plan").val();
+
+    localStorage.setItem(time, plan);
+});
+
+ function usePlanner() {
+     $(".hour").each(function() {
+         var currHour= $(this).text();
+         var currPLan= localStorage.getItem(currHour);
+
+         if(currPLan !== null) {
+             $(this).siblangs(".plan").val(currPlan);
+         }
+     });
+ }
